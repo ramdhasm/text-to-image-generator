@@ -11,6 +11,10 @@
 		54C682F82AF91727000E4D0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C682F72AF91727000E4D0E /* ContentView.swift */; };
 		54C682FA2AF91729000E4D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C682F92AF91729000E4D0E /* Assets.xcassets */; };
 		54C682FD2AF91729000E4D0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C682FC2AF91729000E4D0E /* Preview Assets.xcassets */; };
+		54C683052AF91795000E4D0E /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 54C683042AF91795000E4D0E /* OpenAIKit */; };
+		54C683072AF917DC000E4D0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C683062AF917DC000E4D0E /* Constants.swift */; };
+		54C683092AF917F9000E4D0E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C683082AF917F9000E4D0E /* ContentViewModel.swift */; };
+		54C6830B2AF92BE7000E4D0E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 54C6830A2AF92BE7000E4D0E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		54C682F72AF91727000E4D0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54C682F92AF91729000E4D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54C682FC2AF91729000E4D0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54C683062AF917DC000E4D0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		54C683082AF917F9000E4D0E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		54C6830A2AF92BE7000E4D0E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C683052AF91795000E4D0E /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,9 @@
 			children = (
 				54C682F52AF91727000E4D0E /* TextToImageGenApp.swift */,
 				54C682F72AF91727000E4D0E /* ContentView.swift */,
+				54C683082AF917F9000E4D0E /* ContentViewModel.swift */,
+				54C683062AF917DC000E4D0E /* Constants.swift */,
+				54C6830A2AF92BE7000E4D0E /* .gitignore */,
 				54C682F92AF91729000E4D0E /* Assets.xcassets */,
 				54C682FB2AF91729000E4D0E /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = TextToImageGen;
+			packageProductDependencies = (
+				54C683042AF91795000E4D0E /* OpenAIKit */,
+			);
 			productName = TextToImageGen;
 			productReference = 54C682F22AF91727000E4D0E /* TextToImageGen.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 54C682E92AF91727000E4D0E;
+			packageReferences = (
+				54C683032AF91795000E4D0E /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+			);
 			productRefGroup = 54C682F32AF91727000E4D0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C682FD2AF91729000E4D0E /* Preview Assets.xcassets in Resources */,
+				54C6830B2AF92BE7000E4D0E /* .gitignore in Resources */,
 				54C682FA2AF91729000E4D0E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C683092AF917F9000E4D0E /* ContentViewModel.swift in Sources */,
 				54C682F82AF91727000E4D0E /* ContentView.swift in Sources */,
 				54C682F62AF91727000E4D0E /* TextToImageGenApp.swift in Sources */,
+				54C683072AF917DC000E4D0E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54C683032AF91795000E4D0E /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcodotio/OpenAIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54C683042AF91795000E4D0E /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54C683032AF91795000E4D0E /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54C682EA2AF91727000E4D0E /* Project object */;
 }
